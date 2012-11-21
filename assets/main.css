@@ -1,3 +1,22 @@
 body {
+  padding: 10px;
   font-family: 'Adamina', serif;
+  text-align: center;
+}
+
+article {
+  margin-top: 40px;
+  padding-top: 55px;
+  /* Source: http://archive.org/stream/deskbookoftypesp00amer#page/759/mode/1up */
+  background: url(rococo1.png) center top no-repeat;
+  background-size: 50%;
+}
+
+#work ul {
+  margin: 35px 0;
+  font-size: 1.1em;
+}
+#work ul li {
+  display: inline;
+  padding: 10px 50px;
 }
