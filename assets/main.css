@@ -9,7 +9,13 @@ article {
   padding-top: 55px;
   /* Source: http://archive.org/stream/deskbookoftypesp00amer#page/759/mode/1up */
   background: url(rococo1.png) center top no-repeat;
-  background-size: 50%;
+}
+
+@media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
+  article {
+    background-image: url(rococo1@2x.png);
+    background-size: 565px 45px;
+  }
 }
 
 #work ul {
