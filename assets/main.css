@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   padding: 10px;
   font-family: 'Adamina', serif;
   text-align: center;
@@ -11,18 +12,44 @@ article {
   background: url(rococo1.png) center top no-repeat;
 }
 
+#work ul {
+  margin: 35px 0;
+  -webkit-padding-start: 0;
+     -moz-padding-start: 0;
+          padding-start: 0;
+  font-size: 1.1em;
+}
+#work ul li {
+  display: inline-block;
+  padding: 10px 50px;
+}
+
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
   article {
     background-image: url(rococo1@2x.png);
     background-size: 565px 45px;
   }
 }
-
-#work ul {
-  margin: 35px 0;
-  font-size: 1.1em;
+@media (max-width: 585px) {
+  body {
+    font-size: .8em;
+  }
+  
+  article {
+    background-size: contain;
+  }
+  
+  #work ul li {
+    padding: 10px 25px;
+  }
 }
-#work ul li {
-  display: inline;
-  padding: 10px 50px;
+
+@media (max-width: 400px) {
+  #top h1 {
+    font-size: 1.8em;
+  }
+  
+  #work ul li {
+    padding: 10px 10px;
+  }
 }
