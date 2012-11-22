@@ -18,9 +18,7 @@ article {
 
 #work ul {
   margin: 35px 0;
-  -webkit-padding-start: 0;
-     -moz-padding-start: 0;
-          padding-start: 0;
+  padding: 0;
   font-size: 1.1em;
 }
 #work ul li {
