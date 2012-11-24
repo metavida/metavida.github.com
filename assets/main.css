@@ -31,7 +31,7 @@ article {
   font-size: 1.1em;
 }
 #work li {
-  display: inline-block;
+  display: inline;
   margin: 10px 35px;
   padding: 0 0 0 2em;
   line-height: 1.5em; /* aiming for 32px */
