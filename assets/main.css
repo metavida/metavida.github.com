@@ -37,7 +37,7 @@ article {
     background-size: 565px 45px;
   }
 }
-@media (max-width: 585px) {
+@media (max-width: 36em) { /* 585px ÷ 16 */
   body {
     font-size: .8em;
   }
@@ -51,7 +51,7 @@ article {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 25em) { /* 400px ÷ 16 */
   #top h1 {
     font-size: 1.8em;
   }
