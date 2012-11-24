@@ -37,6 +37,14 @@ article {
   background: url(github.png) left center no-repeat;
   background-size: contain;
 }
+#work .flickr {
+  background: url(flickr.png) left center no-repeat;
+  background-size: contain;
+}
+#work .linkedin {
+  background: url(linkedin.png) left center no-repeat;
+  background-size: contain;
+}
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
   article {
@@ -46,6 +54,12 @@ article {
   
   #work .github {
     background-image: url(github@2x.png);
+  }
+  #work .flickr {
+    background-image: url(flickr@2x.png);
+  }
+  #work .linkedin {
+    background-image: url(linkedin@2x.png);
   }
 }
 @media (max-width: 36em) { /* 585px ÷ 16 */
@@ -69,5 +83,6 @@ article {
   
   #work li {
     margin: 10px 10px;
+    padding: 0 0 0 1.7em;
   }
 }
