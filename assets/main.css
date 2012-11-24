@@ -3,6 +3,12 @@ body {
   padding: 10px;
   font-family: 'Adamina', serif;
   text-align: center;
+  
+  /* Gratuitous font resize annimation on browser width change */
+  -webkit-transition: font-size .5s; 
+     -moz-transition: font-size .5s; 
+       -o-transition: font-size .5s; 
+          transition: font-size .5s;
 }
 
 body > * {
