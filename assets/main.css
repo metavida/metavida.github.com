@@ -21,9 +21,14 @@ article {
   padding: 0;
   font-size: 1.1em;
 }
-#work ul li {
+#work li {
   display: inline-block;
   padding: 10px 50px;
+  line-height: 32px;
+}
+#work .github {
+  padding-left: 40px;
+  background: url(github.png) left center no-repeat;
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
