@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 10px;
+  padding: 10px 0 150px;
   font-family: 'Adamina', serif;
   text-align: center;
 
@@ -110,5 +110,9 @@ article {
   #work li {
     margin: 10px 10px;
     padding: 0 0 0 1.7em;
+  }
+
+  #work .details {
+   right: -3em;
   }
 }
