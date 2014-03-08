@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+}
+h1 {
+  font-size: 15rem;
+  margin: .7em 0 .1em;
+}
+.detail {
+  font-size: 2rem;
+}
+
+body.no #yes, body.yes #no {
+  display: none;
+}
