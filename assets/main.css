@@ -3,11 +3,11 @@ body {
   padding: 10px;
   font-family: 'Adamina', serif;
   text-align: center;
-  
+
   /* Gratuitous font resize annimation on browser width change */
-  -webkit-transition: font-size .5s; 
-     -moz-transition: font-size .5s; 
-       -o-transition: font-size .5s; 
+  -webkit-transition: font-size .5s;
+     -moz-transition: font-size .5s;
+       -o-transition: font-size .5s;
           transition: font-size .5s;
 }
 
@@ -48,13 +48,19 @@ article {
   background: url(linkedin.png) left center no-repeat;
   background-size: contain;
 }
+#work_details .linkedin {
+  -webkit-filter: grayscale(90%);
+}
+#work_details div:hover {
+  -webkit-filter: grayscale(0%);
+}
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
   article {
     background-image: url(rococo1@2x.png), url(rococo2@2x.png);
     background-size: 565px 25px, 55px 25px;
   }
-  
+
   #work .github {
     background-image: url(github@2x.png);
   }
@@ -69,11 +75,11 @@ article {
   body {
     font-size: .8em;
   }
-  
+
   article {
     background-size: contain, 55px 25px;
   }
-  
+
   #work li {
     margin: 10px 20px;
   }
@@ -83,11 +89,11 @@ article {
   #top h1 {
     font-size: 1.8em;
   }
-  
+
   article {
     background-size: contain, 40px 18px;
   }
-  
+
   #work li {
     margin: 10px 10px;
     padding: 0 0 0 1.7em;
