@@ -1,12 +1,13 @@
 body {
   text-align: center;
+  margin: 8rem 1rem 1rem;
 }
 h1 {
   font-size: 15rem;
-  margin: .7em 0 .1em;
+  margin: .1em 0 .1em;
 }
 .detail {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 body.no #yes, body.yes #no {
