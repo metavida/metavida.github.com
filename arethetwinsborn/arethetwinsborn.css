@@ -3,13 +3,34 @@ body {
   margin: 8rem 1rem 1rem;
 }
 h1 {
-  font-size: 15rem;
+  font-size: 15em;
   margin: .1em 0 .1em;
 }
 .detail {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 body.no #yes, body.yes #no {
   display: none;
+}
+
+/* Handle short browsers */
+@media (max-height: 30em) {
+  body {
+    margin: 2rem 1rem 1rem;
+  }
+}
+/* Handle narrow browsers */
+@media (max-width: 38em) { /* 585px ÷ 15 */
+  body {
+    font-size: 0.5em;
+  }
+  .detail {
+    font-size: 2em;
+  }
+}
+@media (max-width: 26em) { /* 400px ÷ 15 */
+  body {
+    font-size: 0.4em;
+  }
 }
