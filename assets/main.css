@@ -32,6 +32,7 @@ article {
 }
 #work li {
   display: inline;
+  position: relative;
   margin: 10px 35px;
   padding: 0 0 0 2em;
   line-height: 1.5em; /* aiming for 32px */
@@ -49,17 +50,22 @@ article {
   background-size: contain;
 }
 #work .details {
-  transition: 1s;
-  height: 0px;
+  position: absolute;
+  top: 1.6em;
+  right: -1em;
   overflow: hidden;
-  -webkit-filter: grayscale(90%);
-}
-#work li:hover .details, #work li.hover .details {
-  transition: 1s;
-  height: 200px;
+  -webkit-filter: grayscale(100%);
 }
 #work .details:hover {
-  -webkit-filter: grayscale(0%);
+  -webkit-filter: grayscale(0);
+}
+#work .details {
+  transition: 0.9s;
+  height: 0px;
+}
+#work li:hover .details, #work li.hover .details {
+  transition: 0.7s;
+  height: 200px;
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
