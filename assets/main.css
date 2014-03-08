@@ -48,10 +48,17 @@ article {
   background: url(linkedin.png) left center no-repeat;
   background-size: contain;
 }
-#work_details .linkedin {
+#work .details {
+  transition: 1s;
+  height: 0px;
+  overflow: hidden;
   -webkit-filter: grayscale(90%);
 }
-#work_details div:hover {
+#work li:hover .details, #work li.hover .details {
+  transition: 1s;
+  height: 200px;
+}
+#work .details:hover {
   -webkit-filter: grayscale(0%);
 }
 
