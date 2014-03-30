@@ -75,7 +75,7 @@ article {
   transition: 0.7s;
 }
 #work li.github:hover .details, #work li.github.hover .details {
-  height: 600px;
+  height: 300px;
 }
 #work li.flickr:hover .details, #work li.flickr.hover .details {
   height: 265px;
