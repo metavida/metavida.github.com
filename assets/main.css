@@ -73,14 +73,18 @@ article {
 }
 #work li:hover .details, #work li.hover .details {
   transition: 0.7s;
-  height: 200px;
-}
-#work li.flickr:hover .details, #work li.flickr.hover .details {
-  height: 265px;
 }
 #work li.github:hover .details, #work li.github.hover .details {
   height: 600px;
 }
+#work li.flickr:hover .details, #work li.flickr.hover .details {
+  height: 265px;
+}
+#work li.linkedin:hover .details, #work li.linkedin.hover .details
+{
+  height: 200px;
+}
+
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
   article {
