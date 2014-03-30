@@ -41,6 +41,9 @@ article {
   background: url(github.png) left center no-repeat;
   background-size: contain;
 }
+#work .github .details {
+  left: -1em;
+}
 #work .flickr {
   background: url(flickr.png) left center no-repeat;
   background-size: contain;
@@ -52,10 +55,12 @@ article {
   background: url(linkedin.png) left center no-repeat;
   background-size: contain;
 }
+#work .linkedin .details {
+  right: -1em;
+}
 #work .details {
   position: absolute;
   top: 1.6em;
-  right: -1em;
   overflow: auto;
   -webkit-filter: grayscale(100%);
 }
@@ -72,6 +77,9 @@ article {
 }
 #work li.flickr:hover .details, #work li.flickr.hover .details {
   height: 265px;
+}
+#work li.github:hover .details, #work li.github.hover .details {
+  height: 600px;
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
