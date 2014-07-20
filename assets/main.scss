@@ -86,23 +86,25 @@ article {
     }
   }
 
-  li:hover .details, li.hover .details {
-    @include transition (height 0.7s);
-    z-index: 2;
-  }
+  li:hover, li.hover {
+    .details {
+      @include transition (height 0.7s);
+      z-index: 2;
+    }
 
-  li.github:hover .details, li.github.hover .details {
-    height: 300px;
-  }
-  li.flickr:hover .details, li.flickr.hover .details {
-    height: 265px;
-  }
-  li.linkedin:hover .details, li.linkedin.hover .details {
-    height: 200px;
+    &.github .details {
+      height: 300px;
+    }
+    &.flickr .details {
+      height: 265px;
+    }
+    &.linkedin .details {
+      height: 200px;
+    }
   }
 }
 
-@media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
+@include hidpi(1.5) {
   article {
     background-image: url(rococo1@2x.png), url(rococo2@2x.png);
     background-size: 565px 25px, 55px 25px;
@@ -120,6 +122,7 @@ article {
     }
   }
 }
+
 @media (max-width: 36em) { /* 585px ÷ 16 */
   body {
     font-size: .8em;
