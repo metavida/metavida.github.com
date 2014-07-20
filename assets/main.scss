@@ -17,7 +17,9 @@ body > * {
   min-width: 300px;
 }
 
-a { color: #679 }
+a {
+  color: #679
+}
 
 article {
   margin-top: 40px;
@@ -66,13 +68,13 @@ article {
   height: 0px;
   overflow: hidden;
   background: #fff;
-  -webkit-filter: grayscale(100%);
+  @include filter (grayscale(100%));
 
   @include transition (height 0.9s);
   z-index: 1;
 }
 #work .details:hover {
-  -webkit-filter: grayscale(0);
+  @include filter (grayscale(0));
 }
 #work li:hover .details, #work li.hover .details {
   @include transition (height 0.7s);
@@ -84,8 +86,7 @@ article {
 #work li.flickr:hover .details, #work li.flickr.hover .details {
   height: 265px;
 }
-#work li.linkedin:hover .details, #work li.linkedin.hover .details
-{
+#work li.linkedin:hover .details, #work li.linkedin.hover .details {
   height: 200px;
 }
 
