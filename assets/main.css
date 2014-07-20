@@ -61,18 +61,20 @@ article {
 #work .details {
   position: absolute;
   top: 1.6em;
-  overflow: auto;
+  height: 0px;
+  overflow: hidden;
+  background: #fff;
   -webkit-filter: grayscale(100%);
+
+  transition: height 0.9s;
+  z-index: 1;
 }
 #work .details:hover {
   -webkit-filter: grayscale(0);
 }
-#work .details {
-  transition: 0.9s;
-  height: 0px;
-}
 #work li:hover .details, #work li.hover .details {
-  transition: 0.7s;
+  transition: height 0.7s;
+  z-index: 2;
 }
 #work li.github:hover .details, #work li.github.hover .details {
   height: 300px;
