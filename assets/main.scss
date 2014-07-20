@@ -72,13 +72,13 @@ article {
 
   .details {
     position: absolute;
-    top: 1.6em;
+    top: 1.2em;
     height: 0px;
+    padding: 0;
     overflow: hidden;
-    background: #fff;
     @include filter (grayscale(100%));
 
-    @include transition (height 0.9s);
+    @include transition (height 0.9s, padding 0.9s step-end);
     z-index: 1;
 
     &:hover {
@@ -88,7 +88,9 @@ article {
 
   li:hover, li.hover {
     .details {
-      @include transition (height 0.7s);
+      padding: .3em 0 0;
+
+      @include transition (height 0.7s, padding 0.7s step-start);
       z-index: 2;
     }
 
@@ -178,6 +180,7 @@ $thumb-margin: 10px;
   overflow: hidden;
   border: 1px solid #aaa;
   text-align: center;
+  background: #fff;
 }
 #flickr_badge_wrapper {
   padding: 10px 0;
