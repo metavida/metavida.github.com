@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'bourbon/bourbon';
+
 body {
   margin: 0;
   padding: 10px 0 150px;
@@ -8,10 +10,7 @@ body {
   text-align: center;
 
   /* Gratuitous font resize annimation on browser width change */
-  -webkit-transition: font-size .5s;
-     -moz-transition: font-size .5s;
-       -o-transition: font-size .5s;
-          transition: font-size .5s;
+  @include transition (font-size .5s);
 }
 
 body > * {
@@ -69,14 +68,14 @@ article {
   background: #fff;
   -webkit-filter: grayscale(100%);
 
-  transition: height 0.9s;
+  @include transition (height 0.9s);
   z-index: 1;
 }
 #work .details:hover {
   -webkit-filter: grayscale(0);
 }
 #work li:hover .details, #work li.hover .details {
-  transition: height 0.7s;
+  @include transition (height 0.7s);
   z-index: 2;
 }
 #work li.github:hover .details, #work li.github.hover .details {
