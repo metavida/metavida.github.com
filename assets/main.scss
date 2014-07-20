@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 10px 0 150px;
+  padding: 10px 0 250px;
   font-family: 'Adamina', serif;
   text-align: center;
 
@@ -164,16 +164,61 @@ article {
 /*
 Images are wrapped in divs classed "flickr_badge_image" with ids "flickr_badge_imageX" where "X" is an integer specifying ordinal position. Below are some styles to get you started!
 */
-#flickr_badge_uber_wrapper {width:600px; height:260px; overflow: hidden; border: 1px solid #aaa; text-align:center;}
-#flickr_badge_wrapper {padding:10px 0 10px 0;}
-.flickr_badge_image {display:inline-block; margin:0 10px 10px 10px;}
-.flickr_badge_image img {border: none;}
-#flickr_badge_source {text-align:left; margin:0 10px 0 10px;}
-#flickr_badge_icon {float:left; margin-right:5px;}
-#flickr_www {display:block; padding:0 10px 0 10px !important; font: 11px Arial, Helvetica, Sans serif !important; color:#3993ff !important;}
-#flickr_badge_uber_wrapper a:hover,
-#flickr_badge_uber_wrapper a:link,
-#flickr_badge_uber_wrapper a:active,
-#flickr_badge_uber_wrapper a:visited {text-decoration:none !important; background:inherit !important;color:#3993ff;}
-#flickr_badge_wrapper {background-color:#ffffff;}
-#flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
+$flickr-header-height: 15px;
+$thumb-count: 10; // configured via the Flickr <script> params
+$thumb-width: 100px;
+$thumb-height: 100px;
+$thumb-margin: 10px;
+
+#flickr_badge_uber_wrapper {
+  $num-columns: 5;
+  $num-rows: $thumb-count / $num-columns;
+  width: $num-columns * ($thumb-width + $thumb-margin * 2);
+  height: $num-rows * ($thumb-height + $thumb-margin * 2) + $flickr-header-height;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+#flickr_badge_wrapper {
+  padding: 10px 0;
+}
+.flickr_badge_image {
+  display: inline-block;
+  width: 100px;
+  margin: 0 $thumb-margin $thumb-margin $thumb-margin;
+  vertical-align: middle;
+
+  img {
+    border: none;
+  }
+}
+#flickr_badge_source {
+  text-align: left;
+  margin: 0 10px;
+}
+#flickr_badge_icon {
+  float: left;
+  margin-right: 5px;
+}
+#flickr_www {
+  display: block;
+  height: $flickr-header-height;
+  overflow: visible;
+  padding: 0 10px !important;
+  font: 11px Arial, Helvetica, Sans serif !important;
+  color: #3993ff !important;
+
+  &:hover, &:link, &:active, &:visited {
+    text-decoration: none !important;
+    background: inherit !important;
+    color: #3993ff;
+  }
+}
+#flickr_badge_wrapper {
+  background-color: #fff;
+}
+#flickr_badge_source {
+  padding: 0 !important;
+  font: 11px Arial, Helvetica, Sans serif !important;
+  color: #666 !important;
+}
