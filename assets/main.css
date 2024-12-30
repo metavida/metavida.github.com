@@ -17,6 +17,8 @@ body {
   -webkit-perspective: 1px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+
+  background: rgb(55,53,66);
 }
 
 #top {
@@ -44,17 +46,18 @@ body {
 }
 
 #top h1, #top h2 {
-  text-align: right;
-  padding-right: 3rem;
+  text-align: left;
+  padding: 0 3rem;
 }
 
 article {
   position: relative;
-  top: -100vh;
+  top: -130vh;
   width: 100%;
   min-height: 2000px;
-  /* 50% transparent white BG */
-  background: url(hood-forest.png) repeat-x top center;
+  background:
+    url(hood-forest.png) repeat-x top center,
+    linear-gradient(0deg, rgb(55, 53, 66) 30%, rgba(55,53,66, 0) 50%);
   perspective: 2px;
   -webkit-perspective: 2px;
 }
