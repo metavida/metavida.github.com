@@ -1,13 +1,73 @@
+html {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;;
+}
+
 body {
   margin: 0;
-  padding: 10px;
+  padding: 0;
+  width: 100vw;
+  /* max-width: 1000px; */
+
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  -webkit-perspective: 1px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+#top {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+#top:after {
+  background-image: url("hood-sunset.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  content: "";
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+#top h1, #top h2 {
+  text-align: right;
+  padding-right: 3rem;
+}
+
+article {
+  position: relative;
+  top: -100vh;
+  width: 100%;
+  min-height: 2000px;
+  /* 50% transparent white BG */
+  background: url(hood-forest.png) repeat-x top center;
+  perspective: 2px;
+  -webkit-perspective: 2px;
+}
+
+
+body {
   font-family: 'Adamina', serif;
   text-align: center;
-  
+
   /* Gratuitous font resize annimation on browser width change */
-  -webkit-transition: font-size .5s; 
-     -moz-transition: font-size .5s; 
-       -o-transition: font-size .5s; 
+  -webkit-transition: font-size .5s;
+     -moz-transition: font-size .5s;
+       -o-transition: font-size .5s;
           transition: font-size .5s;
 }
 
@@ -16,14 +76,6 @@ body > * {
 }
 
 a { color: #679 }
-
-article {
-  margin-top: 40px;
-  padding: 55px 0;
-  /* Source: http://archive.org/stream/deskbookoftypesp00amer#page/759/mode/1up */
-  background: url(rococo1.png) center top no-repeat,
-    url(rococo2.png) center bottom no-repeat;
-}
 
 #work ul {
   margin: 35px 0 10px;
@@ -50,11 +102,6 @@ article {
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
-  article {
-    background-image: url(rococo1@2x.png), url(rococo2@2x.png);
-    background-size: 565px 25px, 55px 25px;
-  }
-  
   #work .github {
     background-image: url(github@2x.png);
   }
@@ -69,11 +116,7 @@ article {
   body {
     font-size: .8em;
   }
-  
-  article {
-    background-size: contain, 55px 25px;
-  }
-  
+
   #work li {
     margin: 10px 20px;
   }
@@ -83,11 +126,7 @@ article {
   #top h1 {
     font-size: 1.8em;
   }
-  
-  article {
-    background-size: contain, 40px 18px;
-  }
-  
+
   #work li {
     margin: 10px 10px;
     padding: 0 0 0 1.7em;
