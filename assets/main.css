@@ -1,15 +1,15 @@
 html {
   overflow: hidden;
   display: flex;
-  justify-content: center;;
+  justify-content: center;
 }
 
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
   width: 100vw;
-  /* max-width: 1000px; */
-
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -18,23 +18,24 @@ body {
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 
-  background: rgb(55,53,66);
+  background: white;
 }
 
 #background {
-  width: 100%;
-  height: 200vh;
   position: absolute;
   top: 0;
+  width: max(100%, 150vh);
+  height: 150vh;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
 
 #background:after {
-  background-image: url("hood-sunset.jpg");
+  background-image: url("hood-watercolor.png");
+  background-color: white;
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -49,12 +50,14 @@ body {
 #top {
   position: relative;
   top: 0;
-  min-height: 60vh;
+  width: 0;
+  overflow: visible;
 }
 
 #top hgroup {
   position: sticky;
   top: 0;
+  width: 100vw;
   padding: 1rem 3rem 0;
 }
 
@@ -66,7 +69,7 @@ body {
 
 article {
   position: relative;
-  top: 0;
+  top: 60vh;
   width: 100%;
   min-height: 2000px;
   background:
@@ -84,10 +87,6 @@ body {
      -moz-transition: font-size .5s;
        -o-transition: font-size .5s;
           transition: font-size .5s;
-}
-
-body > * {
-  min-width: 300px;
 }
 
 a { color: #679 }
