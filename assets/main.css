@@ -15,36 +15,55 @@ body {
   overflow-y: auto;
   perspective: 1px;
   -webkit-perspective: 1px;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-
   background: white;
 }
 
 #background {
   position: absolute;
   top: 0;
-  width: max(100%, 150vh);
-  height: 150vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
 
-#background:after {
-  background-image: url("hood-watercolor.png");
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
+#background .mountain {
+  background: url("hood-watercolor.png") no-repeat top center/contain transparent;
   position: absolute;
   top: 0px;
   left: 0px;
-  right: 0px;
-  bottom: 0px;
+  width: max(100%, 150vh);
+  height: 150vh;
   z-index: -1;
-  content: "";
   transform: translateZ(-1px) scale(2);
   -webkit-transform: translateZ(-1px) scale(2);
+}
+
+#background .mountain + .forrest {
+  background:
+    url(hood-forest.png) repeat-x top center/90%,
+    linear-gradient(0deg, rgb(55, 53, 66) 30%, rgba(55, 53, 66, 0) 50%);
+  position: absolute;
+  top: 120vh;
+  left: 0;
+  width: 100vw;
+  height: 1500px;
+  z-index: -1;
+  transform: translateZ(-0.5px) scale(1.5);
+  -webkit-transform: translateZ(-0.5px) scale(1.5);
+}
+
+#background .forrest +.forrest {
+  background: url(hood-forest-2.png) repeat-x top left;
+  background-position-x: -50vw;
+  background-size: 100vw;
+  position: absolute;
+  top: 120vh;
+  left: 0;
+  width: 100vw;
+  height: 140vh;
+  z-index: -1;
 }
 
 #top {
@@ -67,17 +86,66 @@ body {
   text-align: left;
 }
 
-article {
+section {
   position: relative;
-  top: 60vh;
+  top: 85vh;
   width: 100%;
-  min-height: 2000px;
-  background:
-    url(hood-forest.png) repeat-x top center,
-    linear-gradient(0deg, rgb(55, 53, 66) 30%, rgba(55,53,66, 0) 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 1rem;
+}
+
+article {
+  width: min(100%, 40rem);
+}
+
+article h2 {
+  margin: 0;
+  padding: 0 0 2rem;
+  font-size: 3rem;
+  text-shadow: 0px 0px 6px white, 0px 0px 6px white, 0px 0px 6px white, 0px 0px 6px white;
+}
+
+article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+article a {
+  display: block;
+  background-color: rgb(228, 201, 149);
+  border: 3px solid rgb(134, 104, 77);
+  border-radius: 1em;
+  padding: 1em;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+article .more {
+  display: block;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+article a:hover {
+  text-decoration: underline;
+  background-color: rgb(233, 216, 181);
+}
+article a:hover .more {
+  text-decoration: none;
 }
 
 
+
+
+/* Begin: orignal CSS */
 body {
   font-family: 'Adamina', serif;
   text-align: center;
