@@ -1,7 +1,5 @@
 html {
   overflow: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 body {
@@ -16,6 +14,15 @@ body {
   perspective: 1px;
   -webkit-perspective: 1px;
   background: white;
+
+  font-family: 'Adamina', serif;
+  text-align: center;
+
+  /* Gratuitous font resize annimation on browser width change */
+  -webkit-transition: font-size .5s;
+  -moz-transition: font-size .5s;
+  -o-transition: font-size .5s;
+  transition: font-size .5s;
 }
 
 h1, h2 {
@@ -49,12 +56,12 @@ h1, h2 {
 #background .mountain + .forrest {
   background:
     url(hood-forest.png) repeat-x top center/90%,
-    linear-gradient(0deg, rgb(55, 53, 66) 30%, rgba(55, 53, 66, 0) 50%);
+    linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
   position: absolute;
   top: 120vh;
   left: 0;
   width: 100vw;
-  height: 1500px;
+  height: 100vw;
   z-index: -1;
   transform: translateZ(-0.5px) scale(1.5);
   -webkit-transform: translateZ(-0.5px) scale(1.5);
@@ -68,7 +75,7 @@ h1, h2 {
   top: 120vh;
   left: 0;
   width: 100vw;
-  height: 140vh;
+  height: calc((1416/1360)*(100vw));
   z-index: -1;
   transform: translateZ(-0.1px) scale(1.1);
   -webkit-transform: translateZ(-0.1px) scale(1.1);
@@ -152,21 +159,6 @@ article a:hover, article a:focus {
   background-color: rgb(233, 216, 181);
 }
 
-
-
-
-/* Begin: orignal CSS */
-body {
-  font-family: 'Adamina', serif;
-  text-align: center;
-
-  /* Gratuitous font resize annimation on browser width change */
-  -webkit-transition: font-size .5s;
-     -moz-transition: font-size .5s;
-       -o-transition: font-size .5s;
-          transition: font-size .5s;
-}
-
 #work a {
   display: flex;
   align-items: center;
@@ -185,22 +177,26 @@ body {
 #work .github a::before {
   background: url(github.png) left center no-repeat;
 }
+
 #work .flickr a::before {
   background: url(flickr.png) left center no-repeat;
 }
+
 #work .linkedin a::before {
   background: url(linkedin.png) left center no-repeat;
 }
 
+
+/* Begin: orignal CSS */
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
-  #work .github {
-    background-image: url(github@2x.png);
+  #work .github a::before {
+    background-image: url(github@2x.png) 2x;
   }
-  #work .flickr {
-    background-image: url(flickr@2x.png);
+  #work .flickr a::before {
+    background-image: url(flickr@2x.png) 2x;
   }
-  #work .linkedin {
-    background-image: url(linkedin@2x.png);
+  #work .linkedin a::before {
+    background-image: url(linkedin@2x.png) 2x;
   }
 }
 @media (max-width: 36em) { /* 585px ÷ 16 */
