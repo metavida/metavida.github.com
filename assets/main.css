@@ -3,8 +3,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -13,7 +11,8 @@ body {
   overflow-y: auto;
   perspective: 1px;
   -webkit-perspective: 1px;
-  background: white;
+  background: rgb(203, 209, 177);
+  background-image: linear-gradient(0deg, rgb(203, 209, 177) 70%, white 80%);
 
   font-family: 'Adamina', serif;
   text-align: center;
@@ -23,6 +22,11 @@ body {
   -moz-transition: font-size .5s;
   -o-transition: font-size .5s;
   transition: font-size .5s;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
 }
 
 h1, h2 {
@@ -42,7 +46,7 @@ h1, h2 {
 }
 
 #background .mountain {
-  background: url("hood-watercolor.png") no-repeat top center/contain transparent;
+  background: url("hood-watercolor.png") no-repeat top center/contain white;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -61,7 +65,7 @@ h1, h2 {
   top: 120vh;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 90vw;
   z-index: -1;
   transform: translateZ(-0.5px) scale(1.5);
   -webkit-transform: translateZ(-0.5px) scale(1.5);
@@ -107,13 +111,13 @@ h1, h2 {
 
 section {
   position: relative;
-  top: 85vh;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8rem;
-  padding: 0 1rem;
+  padding: 85vh 1rem 10rem;
 }
 
 article {
