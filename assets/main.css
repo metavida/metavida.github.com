@@ -206,6 +206,8 @@ article a:hover, article a:focus {
 
 #work a::before {
   background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
   content: "";
   width: 2em;
   height: 2em;
@@ -213,16 +215,17 @@ article a:hover, article a:focus {
   padding-right: .5em;
 }
 
+
 #work .github a::before {
-  background: url(github.png) left center no-repeat;
+  background-image: url(github.png);
 }
 
 #work .flickr a::before {
-  background: url(flickr.png) left center no-repeat;
+  background-image: url(flickr.png);
 }
 
 #work .linkedin a::before {
-  background: url(linkedin.png) left center no-repeat;
+  background-image: url(linkedin.png);
 }
 
 footer {
@@ -231,6 +234,7 @@ footer {
   display: flex;
   padding: 10em 1em 1em;
   background-color: rgb(17, 23, 11);
+  background-size: 32px 32px;
   color: white;
   gap: 1em;
   justify-content: space-between;
