@@ -70,7 +70,7 @@ h1 {
   -webkit-transform: translateZ(-1px) scale(2);
 }
 
-#background .mountain + .forrest {
+#background .mountain + .forest {
   background:
     url(watercolor-forest-1-2000.webp) repeat-x top center/90%,
     linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
@@ -87,7 +87,7 @@ h1 {
   -webkit-transform: translateZ(-0.5px) scale(1.5);
 }
 
-#background .forrest +.forrest {
+#background .forest +.forest {
   background: url(hood-forest-2.png) repeat-x top left;
   background-position-x: -50vw;
   background-size: cover;
@@ -116,7 +116,7 @@ h1 {
     background-image: url("watercolor-hood-4000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
   }
 
-  #background .mountain+.forrest {
+  #background .mountain+.forest {
     background:
       url(watercolor-forest-1-4000.webp) repeat-x top center/90%,
       linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
