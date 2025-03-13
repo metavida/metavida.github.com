@@ -70,27 +70,9 @@ h1 {
   -webkit-transform: translateZ(-1px) scale(2);
 }
 
-/* High resolution or high screen size, use the 4000 version */
-@media (min-width: 2000px), (min-height: 2000px),
-  (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2),
-    (min-width: 1000px) and (min-resolution: 2),
-  (min-height: 1000px) and (-webkit-min-device-pixel-ratio: 2),
-    (min-height: 1000px) and (min-resolution: 2) {
-  #background .mountain {
-    background-image: url("watercolor-hood-4000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
-  }
-}
-
-@media (min-width: 2000px) and (min-height: 1200px) and (-webkit-min-device-pixel-ratio: 2),
-       (min-width: 2000px) and (min-height: 1200px) and (min-resolution: 192dpi) {
-  #background .mountain {
-    background-image: url("watercolor-hood-4000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
-  }
-}
-
 #background .mountain + .forrest {
   background:
-    url(hood-forest.png) repeat-x top center/90%,
+    url(watercolor-forest-1-2000.webp) repeat-x top center/90%,
     linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
   position: absolute;
   top: max(120vh, 600px);
@@ -122,6 +104,23 @@ h1 {
   z-index: -1;
   transform: translateZ(-0.1px) scale(1.1);
   -webkit-transform: translateZ(-0.1px) scale(1.1);
+}
+
+/* High resolution or high screen size, use the 4000 version */
+@media (min-width: 2000px), (min-height: 2000px),
+(min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2),
+(min-width: 1000px) and (min-resolution: 2),
+(min-height: 1000px) and (-webkit-min-device-pixel-ratio: 2),
+(min-height: 1000px) and (min-resolution: 2) {
+  #background .mountain {
+    background-image: url("watercolor-hood-4000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
+  }
+
+  #background .mountain+.forrest {
+    background:
+      url(watercolor-forest-1-4000.webp) repeat-x top center/90%,
+      linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
+  }
 }
 
 #top {
