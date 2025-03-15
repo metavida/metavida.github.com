@@ -1,95 +1,295 @@
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
-  padding: 10px;
-  font-family: 'Adamina', serif;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  -webkit-perspective: 1px;
+  background: rgb(203, 209, 177);
+  background-image: linear-gradient(0deg, rgb(203, 209, 177) 70%, white 80%);
+
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+
   text-align: center;
-  
+
   /* Gratuitous font resize annimation on browser width change */
-  -webkit-transition: font-size .5s; 
-     -moz-transition: font-size .5s; 
-       -o-transition: font-size .5s; 
-          transition: font-size .5s;
+  -webkit-transition: font-size .5s;
+  -moz-transition: font-size .5s;
+  -o-transition: font-size .5s;
+  transition: font-size .5s;
 }
 
-body > * {
-  min-width: 300px;
+h1, h2 {
+  margin: 0;
+  padding: 0 0 1em;
+  font-weight: 500;
+  text-shadow: 0px 0px 6px white, 0px 0px 6px white, 0px 0px 6px white, 0px 0px 6px white;
 }
 
-a { color: #679 }
+h1 {
+  font-size: 3em;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+
+#background .mountain {
+  background-color: transparent;;
+  background-image: url("watercolor-hood-2000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  min-width: 2000px;
+  height: 150vh;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+#background .mountain + .forest {
+  background:
+    url(watercolor-forest-1-2000.webp) repeat-x top center/90%,
+    linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
+  position: absolute;
+  top: max(120vh, 600px);
+  width: 100vw;
+  min-width: 2000px;
+  /* aspect-ratio: 1; */
+  height: 1400px;
+  /* min-height: 100vh; */
+  flex-shrink: 0;
+  z-index: -1;
+  transform: translateZ(-0.5px) scale(1.5);
+  -webkit-transform: translateZ(-0.5px) scale(1.5);
+}
+
+#background .forest +.forest {
+  background: url(watercolor-forest-2-2000.webp) repeat-x top left;
+  background-position-x: -50vw;
+  background-size: cover;
+  position: relative;
+  top: max(150vh, 1000px);
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 1200px;
+  /* max-width: 2000px; */
+  /* aspect-ratio: 1; */
+  height: 1300px;
+  /* min-height: 100vh; */
+  flex-shrink: 0;
+  z-index: -1;
+  transform: translateZ(-0.1px) scale(1.1);
+  -webkit-transform: translateZ(-0.1px) scale(1.1);
+}
+
+/* High resolution or high screen size, use the 4000 version */
+@media (min-width: 2000px), (min-height: 2000px),
+(min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2),
+(min-width: 1000px) and (min-resolution: 2),
+(min-height: 1000px) and (-webkit-min-device-pixel-ratio: 2),
+(min-height: 1000px) and (min-resolution: 2) {
+  #background .mountain {
+    background-image: url("watercolor-hood-4000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
+  }
+
+  #background .mountain + .forest {
+    background-image:
+      url(watercolor-forest-1-4000.webp),
+      linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
+  }
+
+  #background .forest +.forest {
+    background-image: url(watercolor-forest-2-4000.webp);
+  }
+}
+
+#top {
+  position: relative;
+  top: 0;
+  width: 0;
+  height: 85vh;
+  overflow: visible;
+}
+
+#top hgroup {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding: 2em 3em 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#top h1 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+section {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8em;
+  padding: 0 1em 12em;
+  box-sizing: border-box;
+}
 
 article {
-  margin-top: 40px;
-  padding: 55px 0;
-  /* Source: http://archive.org/stream/deskbookoftypesp00amer#page/759/mode/1up */
-  background: url(rococo1.png) center top no-repeat,
-    url(rococo2.png) center bottom no-repeat;
+  width: min(100%, 40em);
 }
 
-#work ul {
-  margin: 35px 0 10px;
+article header {
+  padding-bottom: 1em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  font-size: 1.1em;
-}
-#work li {
-  display: inline;
-  margin: 10px 35px;
-  padding: 0 0 0 2em;
-  line-height: 1.5em; /* aiming for 32px */
-}
-#work .github {
-  background: url(github.png) left center no-repeat;
-  background-size: contain;
-}
-#work .flickr {
-  background: url(flickr.png) left center no-repeat;
-  background-size: contain;
-}
-#work .linkedin {
-  background: url(linkedin.png) left center no-repeat;
-  background-size: contain;
 }
 
-@media (min-resolution: 1.5dppx), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5) {
-  article {
-    background-image: url(rococo1@2x.png), url(rococo2@2x.png);
-    background-size: 565px 25px, 55px 25px;
-  }
-  
-  #work .github {
-    background-image: url(github@2x.png);
-  }
-  #work .flickr {
-    background-image: url(flickr@2x.png);
-  }
-  #work .linkedin {
-    background-image: url(linkedin@2x.png);
-  }
+article a {
+  display: flex;
+  align-items: center;
+  background-color: rgb(250, 250, 252);
+  border: 3px solid rgb(116, 156, 187);
+  border-radius: 1em;
+  padding: 0.5em;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
 }
-@media (max-width: 36em) { /* 585px ÷ 16 */
-  body {
-    font-size: .8em;
-  }
-  
-  article {
-    background-size: contain, 55px 25px;
-  }
-  
-  #work li {
-    margin: 10px 20px;
+
+article a img {
+  height: 7em;
+  border-radius: 0.5em;;
+}
+
+article a span {
+  flex-grow: 1;
+  padding: 0.5em;
+  font-weight: 400;
+}
+
+article .more {
+  display: block;
+  font-weight: 300;
+  padding-top: 0.5em;
+}
+
+article a:hover, article a:focus {
+  text-decoration: underline;
+  background-color: rgb(237, 245, 247);
+  border-color: rgb(40, 64, 81);
+  color: rgb(40, 64, 81);
+}
+
+#work a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#work a::before {
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  content: "";
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+  padding-right: .5em;
+}
+
+
+#work .github a::before {
+  background-image: url(github.png);
+}
+
+#work .flickr a::before {
+  background-image: url(flickr.png);
+}
+
+#work .linkedin a::before {
+  background-image: url(linkedin.png);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  padding: 10em 1em 1em;
+  background-color: rgb(17, 23, 11);
+  background-size: 32px 32px;
+  color: white;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: end;
+  text-align: left;
+}
+
+footer ul {
+  padding-left: 1em;
+  margin: 0;
+}
+
+footer a {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  h1, h2 {
+    font-size: 2.5em;
   }
 }
 
-@media (max-width: 25em) { /* 400px ÷ 16 */
-  #top h1 {
+@media (max-width: 500px) {
+  h1, h2 {
     font-size: 1.8em;
   }
-  
-  article {
-    background-size: contain, 40px 18px;
+
+  article a img {
+    height: 5em;
   }
-  
-  #work li {
-    margin: 10px 10px;
-    padding: 0 0 0 1.7em;
+
+  footer {
+    flex-direction: column;
+    gap: 2em;
+    align-items: start;
   }
 }
