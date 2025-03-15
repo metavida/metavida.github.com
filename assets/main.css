@@ -116,14 +116,14 @@ h1 {
     background-image: url("watercolor-hood-4000.webp"), linear-gradient(0deg, rgba(203, 209, 177, 0) 0%, white 30%);
   }
 
-  #background .mountain+.forest {
+  #background .mountain + .forest {
     background-image:
-      url(watercolor-forest-1-4000.webp) repeat-x top center/90%,
+      url(watercolor-forest-1-4000.webp),
       linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
   }
 
-  #background .forest+.forest {
-    background-image: url(watercolor-forest-2-4000.webp) repeat-x top left;
+  #background .forest +.forest {
+    background-image: url(watercolor-forest-2-4000.webp);
   }
 }
 
