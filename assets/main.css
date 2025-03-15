@@ -88,7 +88,7 @@ h1 {
 }
 
 #background .forest +.forest {
-  background: url(hood-forest-2.png) repeat-x top left;
+  background: url(watercolor-forest-2-2000.webp) repeat-x top left;
   background-position-x: -50vw;
   background-size: cover;
   position: relative;
@@ -117,9 +117,13 @@ h1 {
   }
 
   #background .mountain+.forest {
-    background:
+    background-image:
       url(watercolor-forest-1-4000.webp) repeat-x top center/90%,
       linear-gradient(0deg, rgb(203, 209, 177) 30%, rgba(203, 209, 177, 0) 50%);
+  }
+
+  #background .forest+.forest {
+    background-image: url(watercolor-forest-2-4000.webp) repeat-x top left;
   }
 }
 
